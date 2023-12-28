@@ -10,12 +10,14 @@ require('dotenv').config();
 
 const app = express();
 
-console.log("HI")
-
 app.use(morgan('combined'))
 
 app.use(express.urlencoded({extended: true}));
 app.use(express.json());
+
+app.get('/', async (_req, res) => {
+  res.send("Hello world")
+})
 
 app.get('/projects', async (req, res) => {
   try {
