@@ -10,6 +10,8 @@ require('dotenv').config();
 
 const app = express();
 
+console.log("HI")
+
 app.use(morgan('combined'))
 
 app.use(express.urlencoded({extended: true}));
