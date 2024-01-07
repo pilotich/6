@@ -129,7 +129,7 @@ app.delete('/projects/:projectId', async (req, res) => {
 
 const server = app.listen(3001, () => {
   console.log('Starting the server on port 3001');
-  mongoose.connect(process.env.MONGO_URL)
+  mongoose.connect('mongodb+srv://pilotich:hu2K0kPxpRNAkWFP@cluster0.jbysdhn.mongodb.net/projects')
 });
 
 module.exports = server
